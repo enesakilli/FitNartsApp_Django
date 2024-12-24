@@ -1,0 +1,78 @@
+/* Ana container'ı hizalama */
+.counter_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Bölümler arasındaki boşluk */
+    margin-bottom: 30px;
+}
+
+/* Exercise List ve Calorie Calculation stilleri */
+.counter_exercise_list, .counter_calorie {
+    flex: 1; /* Eşit genişlik alır */
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid #FF8000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Progress Tracker Chart alanı */
+.chart_container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #FF8000;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.counter_header_title {
+    color: #FF8000;
+}
+
+#counter_default_exercise_list_info {
+    font-weight: bold;
+}
+
+#counter_custom_exercise_list_info {
+    font-weight: bold;
+}
+
+.counter_button{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+  
+.counter_button:hover {
+    background-color: #D65A31;
+}
+
+#exercise_li {
+    border: 1px solid #ddd; /* Kutu çerçevesi */
+    border-radius: 8px; /* Köşeleri yuvarlak yapar */
+    padding: 15px; /* İç boşluk */
+    margin-bottom: 20px; /* Kutular arası boşluk */
+    background-color: #fdfdfd; /* Hafif gri arkaplan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Animasyon efekti */
+}
+
+#exercise_li:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge büyür */
+    transform: translateY(-5px); /* Hover sırasında kutu hafif yukarı çıkar */
+}
+
+.calories_burned_info {
+    color: black;
+}

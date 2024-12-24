@@ -1,0 +1,50 @@
+{% extends 'base/main.html' %}
+
+{% block content %} 
+
+<div class="bmi_container">
+    <div class="section">
+        <h1 class="bmi_header">BMI Calculator</h1>
+
+        <p class="bmi_info"><strong>BMI:</strong> Used to categorize individuals into different weight status groups, such as underweight, overweight etc. </p>
+        <br>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ bmi_form.as_p }}
+            <button type="submit" name="bmi_submit" class="bmi_calculate_button">Calculate BMI</button>
+        </form>
+        <br>
+
+        {% if bmi %}
+            <h2 class="bmi_info">Your BMI: {{ bmi|floatformat:2 }}</h2> <!-- floatformat:2 virgülden sonra 2 basamak -->
+            <h3 class="bmi_info">{{ result_message }}</h3>
+        {% endif %}
+
+        <br>
+    </div>
+
+    <div class="section">
+        <h1 class="bmi_header">BMR & TDEE Calculator</h1>
+
+        <p class="bmi_info"><strong>BMR:</strong> Amount of energy the body spends just to maintain its vital functions. </p>
+        <p class="bmi_info"><strong>TDEE:</strong> Total energy expenditure of a person throughout the day, including physical activities. </p>
+        <br>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ bmr_form.as_p }}
+            <button type="submit" name="bmr_submit" class="bmi_calculate_button">Calculate BMR & TDEE</button>
+        </form>
+        <br>
+        
+        {% if bmr %}
+            <h2 class="bmi_info">BMR: {{ bmr }} Calories/Day</h2>
+            <h2 class="bmi_info">TDEE: {{ tdee }} Calories/Day</h2>
+        {% endif %}
+    </div>    
+</div>
+<!-- BMR, vücudun sadece hayati fonksiyonlarını sürdürebilmesi için harcadığı enerji miktarını ifade eder -->
+<!-- TDEE, bir kişinin tüm gün boyunca yaptığı fiziksel aktiviteler dahil olmak üzere toplam enerji harcamasıdır -->
+
+{% endblock %}

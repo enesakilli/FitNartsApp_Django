@@ -1,0 +1,161 @@
+body {
+    background-color: white !important;
+}
+
+
+.exercise_list_container {
+    display: flex; /* Flexbox kullanımı */
+    justify-content: space-between; /* Sütunlar arasında eşit boşluk */
+    align-items: flex-start; /* Sütunların üstten hizalanması */
+    gap: 20px; /* Sütunlar arası boşluk */
+    margin: 20px;
+}
+
+/* Her sütun için genel stil */
+.exercise_list_column {
+    flex: 1; /* Her sütunun eşit genişlikte olması */
+    padding: 20px; /* İç boşluk */
+    border: 1px solid #FF8000; /* Kenarlık #ddd */
+    border-radius: 5px; /* Kenar yuvarlama */
+    background-color: #f9f9f9; /* Açık gri arkaplan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#default_exercises_header {
+    color: #FF8000;
+    font-size: 28px;
+}
+
+#default_exercise_title {
+    color: #FF8000;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#default_exercise_title:hover {
+    text-decoration: underline;
+}
+
+#default_exercise_description {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+} 
+
+#default_exercise_description:hover {
+    text-decoration: underline;
+} 
+
+#add_exercises_header {
+    color: #FF8000;
+    font-size: 28px;
+}
+
+#exercise_title_input{
+    width: 35%;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#exercise_description_input{
+    width: 35%;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#exercise_cals_input{
+    width: 35%;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#add_exercise_button{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#add_exercise_button:hover{
+    background-color: #D65A31;
+}
+
+#exercise_add_image {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#custom_exercises_header {
+    color: #FF8000;
+    font-size: 28px;
+}
+
+#custom_exercise_title {
+    color: #FF8000;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#custom_exercise_title:hover {
+    text-decoration: underline;
+}
+
+#custom_exercise_description {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+} 
+
+#custom_exercise_description:hover {
+    text-decoration: underline;
+} 
+
+#custom_exercise_delete {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+} 
+
+#custom_exercise_delete:hover {
+    background-color: #D65A31;
+} 
+
+#custom_exercise_edit {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+} 
+
+#custom_exercise_edit:hover {
+    background-color: #D65A31;
+} 
+
+#no_exercise_message {
+    font-size: 20px;
+}
+

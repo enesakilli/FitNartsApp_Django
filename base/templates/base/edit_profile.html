@@ -1,0 +1,19 @@
+{% extends 'base/main.html' %}
+
+{% load static %} 
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="text-align: center;" id="edit_profile_div">
+        <h2 id="edit_profile_header">Edit Profile</h2>
+        <p class="profile_register_update_date">Register Date: {{ user.userprofile.created }}</p>
+        <p class="profile_register_update_date">Update Date: {{ user.userprofile.updated }}</p>
+        <br>
+        {{ form.as_p }} <!-- Yukarıda form kullanarak form.py dosyamızdaki şeyleri buraya aktarıp düzenlememizi sağlar, tek tek düzenlemek istersek alanları ayrı ayrı alabiliriz -->
+        <button type="submit" id="button_edit_save">Save</button>
+    </div>
+</form>
+
+{% endblock %}

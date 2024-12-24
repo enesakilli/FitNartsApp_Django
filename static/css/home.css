@@ -1,0 +1,66 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("/static/images/dumbbell_background_1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  position: relative; /* Pseudo-element için bağlayıcı */
+  overflow: hidden; /* Taşan pseudo-elementi gizlemek için */
+  text-align: center; /* Başlık için dikey hizalama */
+}
+
+/* Pseudo-element */
+.menu-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Koyu renk katmanı */
+  z-index: 0; /* Ana içeriklerin arkasında kalacak */
+}
+
+/* İçerikler pseudo-elementin önüne taşınır */
+.menu-container > * {
+  position: relative; 
+  z-index: 1;
+}
+
+#home_header_fitnarts {
+  color: #FF8000;
+  font-size: 78px;
+  font-family: 'Oswald', sans-serif; /* Şık ve modern tipografi */
+  font-weight: bold;
+  margin-top: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 10px #FF8000, 0 0 20px #FF8000; /* Parlaklık ve derinlik efekti */
+  letter-spacing: 1px;
+}
+
+.menu-button {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 20px 50px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px; /* Buton metni için daha uyumlu bir boyut */
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 128, 0, 0.7); /* Buton üzerine konan parlaklık efekti */
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 128, 0, 0.5);
+  color: white;
+}
+
+.menu-title {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}

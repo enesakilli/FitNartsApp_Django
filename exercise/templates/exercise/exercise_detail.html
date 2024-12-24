@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1 id="exercise_detail_title">{{ exercise.title }}</h1>
+    <p id="exercise_detail_description">{{ exercise.description }}</p>
+    <p id="exercise_detail_kcal">{{ exercise.cals_per_minute }} Kcal/Min</p>
+    <!-- <p id="exercise_detail_created">Created at: {{ exercise.created_at }}</p> -->
+    <!-- <p>Owner: {{ exercise.user.username }}</p> -->
+
+    <a href="{% url 'exercise_list' %}" id="go_back_exercise_list">Go back to Exercise List</a>
+    <br>
+    <br>
+    <br>
+
+    {% if exercise.image %}
+        <img src="{{ exercise.image.url }}" alt="Exercise Image" id="exercise_image_gif">
+    {% else %}
+        <img src="{% static 'images/no_image.png' %}" alt="Default Image" id="default_exercise_image">
+    {% endif %}
+    
+{% endblock %}

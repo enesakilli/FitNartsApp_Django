@@ -1,0 +1,25 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class="edit_exercise_container">
+    <h1 id="edit_exercise_header">Edit Exercise</h1>
+    <form class="edit_exercise_form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="{{ exercise.title }}" required>
+
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" rows="4" required>{{ exercise.description }}</textarea>
+
+        <label for="cals_per_minute">Calories per Minute:</label>
+        <input type="number" step="0.01" name="cals_per_minute" id="cals_per_minute" value="{{ exercise.cals_per_minute }}">
+
+        <label for="image">Update Image:</label>
+        <input type="file" name="image" id="image">
+
+        <button type="submit" id='edit_exercise_button'>Save Changes</button>
+    </form>
+</div>
+
+{% endblock %}

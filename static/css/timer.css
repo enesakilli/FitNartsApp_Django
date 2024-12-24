@@ -1,0 +1,93 @@
+.timer_container {
+    text-align: center;
+    background-color: #f8f9fa;
+    border: 2px solid #FF8000;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#timer_header {
+    font-size: 52px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#timer_elapsed_time {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.digital_clock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.digit {
+    width: 40px;
+    height: 50px;
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #495057;
+}
+
+#separator {
+    color: black;
+    font-size: 36px;
+    margin: 0 5px;
+}
+
+#timer_status {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#status_running {
+    color: #28a745;
+    font-weight: bold;
+}
+
+#status_stopped {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.timer_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.timer_button {
+    display: inline-block;
+    background-color: #FF8000;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.timer_button:hover {
+    background-color: #D65A31;
+}

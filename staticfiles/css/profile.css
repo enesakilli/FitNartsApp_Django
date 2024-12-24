@@ -1,0 +1,26 @@
+#greet_user_edit {
+    color: black;
+}
+
+.profile_information {
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#edit_profile_link {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#edit_profile_link:hover {
+    background-color: #D65A31;
+}

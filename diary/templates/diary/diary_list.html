@@ -1,0 +1,28 @@
+{% extends 'base/main.html' %}
+
+{% block content %} 
+
+<h1 id="diary_header">Diary List</h1>
+
+<a href="{% url 'add_entry' %}" id="new_entry_button">Add New Entry</a>
+<br>
+
+<ul>
+    {% for entry in entries %}
+        <li id="diary_li">
+            <h2 id="entry_header">{{ entry.header }}</h2>
+            <p id="entry_content">{{ entry.content }}</p>
+            <p id="entry_created">{{ entry.created_at }}</p>
+
+            <form method="post" action="{% url 'delete_entry' entry.id %}" style="display:inline;">
+                {% csrf_token %}
+                <a href="{% url 'edit_entry' entry.id %}" id="entry_edit">Edit</a>
+                <a href="{% url 'delete_entry' entry.id %}" id="entry_delete">Delete</a>
+            </form>
+            <br>
+            <br>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

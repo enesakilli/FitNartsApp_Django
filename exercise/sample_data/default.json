@@ -1,0 +1,66 @@
+[
+    {
+        "user": null,
+        "title": "Push up",
+        "description": "A movement where the body is kept straight, and you lower and raise yourself by bending and extending the arms. It targets the chest, shoulders, and triceps.",
+        "cals_per_minute": 10,
+        "image": "images/push_up_1.gif",
+        "is_default": true
+    },
+    {
+        "user": null,
+        "title": "Sit up 1",
+        "description": "Lying on your back, bending your knees and holding your arms behind your head, lift your body upwards. It aims to develop your abdominal muscles.",
+        "cals_per_minute": 8,
+        "image": "images/sit_up_1.gif",
+        "is_default": true
+    },
+    {
+        "user": null,
+        "title": "Sit up 2",
+        "description": "Lying on your back, lift your knees and arms up, then return to the supine position and repeat. It aims to develop your abdominal muscles.",
+        "cals_per_minute": 7,
+        "image": "images/sit_up_2.gif",
+        "is_default": true
+    },
+    {
+        "user": null,
+        "title": "Squat",
+        "description": "Standing with feet shoulder-width apart, you bend your knees and lower your body as if sitting down, then return to the starting position. It works the legs, glutes, and core.",
+        "cals_per_minute": 12,
+        "image": "images/squat_1.gif",
+        "is_default": true
+    },
+    {
+        "user": null,
+        "title": "Dumbbell 1",
+        "description": "It helps to strengthen muscle groups and improve body shape with free weight training. The aim of this exercise is to strengthen arm muscles.",
+        "cals_per_minute": 7,
+        "image": "images/dumbbell_1.gif",
+        "is_default": true
+    },
+    {
+        "user": null,
+        "title": "Dumbbell 2",
+        "description": "By lifting the weights even higher, the aim is to strengthen the arm muscles and the back of the arm.",
+        "cals_per_minute": 10,
+        "image": "images/dumbbell_2.gif",
+        "is_default": true
+    },
+    {
+        "user": null,
+        "title": "Leg 1",
+        "description": "With your hands firmly on the floor, pull your legs back and forth alternately. This specifically targets the lower abs.",
+        "cals_per_minute": 6,
+        "image": "images/leg_1.gif",
+        "is_default": true
+    },
+    {
+        "user": null,
+        "title": "Leg 2",
+        "description": "Lie on your back and lift your legs one at a time toward the ceiling. This specifically targets the lower abdominals.",
+        "cals_per_minute": 5,
+        "image": "images/leg_2.gif",
+        "is_default": true
+    }
+]

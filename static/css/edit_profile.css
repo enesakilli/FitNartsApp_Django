@@ -1,0 +1,41 @@
+#edit_profile_div {
+    max-width: 600px; 
+    margin: 0 auto; 
+    margin-top: 30px;
+    border: 1px solid #FF8000; 
+    padding: 20px; 
+    border-radius: 10px; 
+    background-color: #f9f9f9;
+    font-size: 20px;
+    text-align: center;
+}
+
+#edit_profile_header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile_register_update_date {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#button_edit_save {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#button_edit_save:hover {
+    background-color: #D65A31;
+}

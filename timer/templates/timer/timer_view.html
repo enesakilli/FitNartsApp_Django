@@ -1,0 +1,34 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class="timer_container">
+    <h1 id="timer_header">Timer</h1>
+
+    <h2 id="timer_elapsed_time">
+        Elapsed Time:
+        <div class="digital_clock">
+            <div class="digit" id="elapsed-minutes">{{ elapsed_minutes }}</div>
+            <span id="separator">:</span>
+            <div class="digit" id="elapsed-seconds">{{ elapsed_seconds }}</div>
+        </div>
+    </h2>
+    
+
+    <h3 id="timer_status">
+        Status:
+        {% if timer.is_running %}
+            <span id="status_running">Running</span>
+        {% else %}
+            <span id="status_stopped">Stopped</span>
+        {% endif %}
+    </h3>
+
+    <div class="timer_buttons">
+        <a href="{% url 'start_timer' %}" class="timer_button">Start</a>
+        <a href="{% url 'stop_timer' %}" class="timer_button">Stop</a>
+        <a href="{% url 'reset_timer' %}" class="timer_button">Reset</a>
+    </div>
+</div>
+
+{% endblock %}

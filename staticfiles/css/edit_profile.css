@@ -1,0 +1,25 @@
+#edit_profile_div {
+    color:#FF8000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.profile_register_update_date {
+    color: #FF8000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#button_edit_save {
+    padding: 12px 30px;
+    background-color: #FF8000;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#button_edit_save:hover {
+    background-color: #D65A31;
+}

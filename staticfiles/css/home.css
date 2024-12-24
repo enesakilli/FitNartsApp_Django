@@ -1,0 +1,43 @@
+body {
+  background: url("{% static 'images/dumbbell_photo1.jpg' %}") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#home_header_fitnarts {
+  color: #FF8000;
+  font-size: 72px;
+  margin-top: 30px;
+}
+
+.menu-button {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 20px 50px;
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  color: #FF8000;
+}
+
+.menu-title {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}

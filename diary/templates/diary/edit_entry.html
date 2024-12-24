@@ -1,0 +1,14 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class="edit_entry_container">
+    <h2 id="edit_entry_header">Edit Entry</h2>
+    <form method="post" class="edit_entry_form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="edit_entry_button">Save Changes</button>
+    </form>
+</div>
+
+{% endblock %}

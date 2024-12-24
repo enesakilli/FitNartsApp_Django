@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+
+{% block content %} 
+
+<h1 id="add_entry_header">Add New Entry</h1>
+
+<form method="post" id="diary_form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="diary_submit_button">Submit</button>
+</form>
+
+<br>
+<a href="{% url 'diary_list' %}" id="go_back_diary_list">Back to Diary List</a>
+
+{% endblock %}

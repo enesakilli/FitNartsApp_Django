@@ -1,0 +1,52 @@
+/* Ana container */
+.bmi_container {
+    display: flex; /* Yan yana yerleşim için */
+    justify-content: space-between; /* Boşlukları düzenler */
+    height: 700px;
+    gap: 20px; /* Bölümler arasındaki boşluk */
+    margin: 20px auto;
+    max-width: 1700px; /* İçeriğin maksimum genişliği */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Her bölümün container'ı */
+.section {
+    flex: 1; /* Eşit genişlikte olacak */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bmi_header {
+    color: #FF8000;
+    font-size: 32px;
+}
+
+.bmi_info {
+    color: #FF8000;
+    font-size: 20px;
+}
+
+.bmi_calculate_button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+  
+.bmi_calculate_button:hover {
+    background-color: #D65A31;
+}

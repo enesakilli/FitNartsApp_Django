@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+
+{% load static %} 
+
+{% block content %}
+
+<div class="profile-container" style="text-align: center;">
+    <h2 id="greet_user_edit">@{{ user.username }}'s Profile</h2>
+
+    {% if user.userprofile.profile_picture %}
+        <img src="{{ user.userprofile.profile_picture.url }}" alt="Profile Picture" style= "width: 150px; height: 150px; border-radius: 50%;">
+    {% else %}
+        <img src="{% static 'images/default.png' %}" alt="Default Profile Picture" style= "width: 150px; height: 150px; border-radius: 50%;">
+    {% endif %}
+
+    <p class="profile_information">Name: {{ user.userprofile.name }}</p>
+    <p class="profile_information">Surname: {{ user.userprofile.surname }}</p>
+    <p class="profile_information">Gender: {{ user.userprofile.gender }}</p>
+    <p class="profile_information">Age: {{ user.userprofile.age }}</p>
+    <p class="profile_information">Height: {{ user.userprofile.height }} cm</p>
+    <p class="profile_information">Weight: {{ user.userprofile.weight }} kg</p>
+    
+    <br>
+    <a href="{% url 'edit-profile' %}" id="edit_profile_link">Edit Profile</a>
+</div>
+
+{% endblock %}

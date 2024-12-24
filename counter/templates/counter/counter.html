@@ -1,0 +1,64 @@
+{% extends 'base/main.html' %}
+
+{% block content %} 
+<div class="counter_container">
+    <div class="counter_exercise_list">
+        <h1 class='counter_header_title'>Exercise List</h1>
+        <ul>
+            {% if default_exercise_list %} <!-- exercise_list'in dolu olup olmadığını kontrol ediyoruz -->
+                {% for default in default_exercise_list %} 
+                    <li>
+                        <label id="counter_default_exercise_list_info">{{ default.title }} ({{default.cals_per_minute}} Kcal/Min)</label> <!-- kcal/min yerine {{.kcalPerMin} tarzı bir şey gelecek} -->
+                        <br>
+                    </li> 
+                    <br>
+                {% endfor %}
+            {% endif %}
+
+            {% if custom_exercise_list %} <!-- exercise_list'in dolu olup olmadığını kontrol ediyoruz -->
+                {% for exercise in custom_exercise_list %}
+                    <li>
+                        <label id="counter_custom_exercise_list_info">{{ exercise.title }} ({{exercise.cals_per_minute}} Kcal/Min)</label>
+                        <br>
+                    </li> 
+                    <br>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+
+    <div class="counter_calorie">
+        <h1 class='counter_header_title'>Calorie Calculation</h1>
+        <!-- Form gönderimi calorie_view'a yönlendiriliyor -->
+        <form method="post" action="{% url 'counter_view' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="calculate" class="counter_button">Calculate</button>
+            {% if total_calories %}
+                <button type="submit" name="save" class="counter_button">Save</button>
+            {% endif %}
+        </form>
+
+        {% if total_calories == 0 %}
+            <h2 class='calories_burned_info'>Calories Burned: No data for Kcal/Min </h2>
+        {% else %} 
+            <h2 class='calories_burned_info'>Calories Burned: {{ total_calories }} Kcal</h2>   
+        {% endif %}
+
+
+    </div>
+</div>    
+    
+<div class="chart_container">
+    <h1 class='counter_header_title'>Progress Tracker Chart</h1>
+    <form method="post" action="{% url 'reset_chart' %}">
+        {% csrf_token %}
+        <button type="submit" class="counter_button">Reset Chart</button>
+    </form>
+    <br>
+    <br>
+    {% include 'counter/chart.html' %}
+</div>
+
+
+{% endblock %}

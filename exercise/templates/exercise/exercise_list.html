@@ -1,0 +1,74 @@
+{% extends 'base/main.html' %}
+
+{% block content %} 
+
+<div class="exercise_list_container">
+    <div class="exercise_list_column" id="default_exercises">
+        <h2 id="default_exercises_header">Default Exercises</h2>
+        <ul>
+            {% if default_exercise_list %} <!-- exercise_list'in dolu olup olmadığını kontrol ediyoruz -->
+                {% for default in default_exercise_list %} <!-- views'ten gelen exercise'ı burada kullanıyorum -->
+                    <li id="exercise_li">
+                        <!-- {{ exercise.title }} Her bir exercise için bir title gösteriyorum listeli şekilde -->
+                        <a href="{% url 'exercise_detail' default.id %}" id="default_exercise_title">{{ default.title }}</a>
+                        <br>
+                        <a href="{% url 'exercise_detail' default.id %}" id="default_exercise_description">
+                            {{ default.description|slice:":40" }}{% if default.description|length > 40 %}...{% endif %}
+                        </a> <!-- description'un ilk 40 karakterini yazar, eğer 40 karakterden uzunsa sonuna ... ekler -->
+                    </li> 
+                    <br>
+                {% endfor %}
+            {% else %}
+                <li>No default exercises available</li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <div class="exercise_list_column" id="add_exercises">
+        <h3 id="add_exercises_header">Add Your Custom Exercises</h3>
+        <!-- 1fr 3fr şeklinde de yapılabilir, sol tarafta Exercise List sağ tarafta Detaylar. Şu an exercises/1 exercises/2 diye açılıyor -->
+        <form method="POST" action="{% url 'add_exercise' %}" enctype="multipart/form-data"> <!-- Exercise ekleme işlemi -->
+            <!-- action formun gönderildiği url add_task view'ine yönlendirir -->
+            {% csrf_token %} 
+            <input type="text" name="title" placeholder="Exercise Name" id="exercise_title_input" required/> <!-- Kullanıcıdan exercise adı için input alıyorum -->
+            <br>
+            <input type="text" name="description" placeholder="Exercise Description" id="exercise_description_input" required/> <!-- Kullanıcıdan exercise description için input alıyorum, required olmasa da olur -->
+            <br>
+            <input type="number" name="cals_per_minute" placeholder="Calories Per Minute (Optional)" step="0.1" min="0" id="exercise_cals_input" />
+            <br>
+            <button type="submit" id="add_exercise_button">Add</button> <!-- Submit için Add butonu -->
+            <br>
+            <br>
+            <label for="image" id="exercise_add_image">Exercise Image/Gif (Optional)</label>
+            <br>
+            <input type="file" name="image" id="image">
+        </form>
+    </div>
+    
+    <div class="exercise_list_column" id="custom_exercises">
+        <h2 id="custom_exercises_header">Custom Exercises</h2>
+        <ul>
+            {% if custom_exercise_list %} <!-- exercise_list'in dolu olup olmadığını kontrol ediyoruz -->
+                {% for exercise in custom_exercise_list %} <!-- views'ten gelen exercise'ı burada kullanıyorum -->
+                    <li id="exercise_li">
+                        <!-- {{ exercise.title }} Her bir exercise için listeli şekilde bir title gösteriyorum -->
+                        <a href="{% url 'exercise_detail' exercise.id %}" id="custom_exercise_title">{{ exercise.title }}</a>
+                        <br>
+                        <a href="{% url 'exercise_detail' exercise.id %}" id="custom_exercise_description">
+                            {{ exercise.description|slice:":40" }}{% if exercise.description|length > 40 %}...{% endif %}
+                        </a> <!-- description'un ilk 40 karakterini bastırır, eğer 40 karakterden uzunsa sonuna ... ekler -->
+                        <br>
+                        <a href="{% url 'edit_exercise' exercise.id %}" id="custom_exercise_edit">Edit</a>
+                        <a href="{% url 'delete_exercise' exercise.id %}" id="custom_exercise_delete">Delete</a> <!-- Her bir exercise'ın yanına delete ve edit linki koydum -->
+                        <!-- Delete ve edit linkini edit_exercise ve delete_exercise view'i ile bağladım -->
+                    </li> 
+                    <br>
+                {% endfor %}
+            {% else %}
+                <li id="no_exercise_message">You have not added any exercises yet</li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="menu-container">
+    <h1 id='home_header_fitnarts'>FitNarts</h1>
+    <a href="{% url 'profile' %}" class="menu-button">
+        <span class="menu-title">Profile</span>
+    </a>
+    <a href="{% url 'exercise_list' %}" class="menu-button">
+        <span class="menu-title">Exercises</span>
+    </a>
+    <a href="{% url 'counter_view' %}" class="menu-button">
+        <span class="menu-title">Progress Tracker</span>
+    </a>
+    <a href="{% url 'health_calculator' %}" class="menu-button">
+        <span class="menu-title">BMI / BMR / TDEE</span>
+    </a>
+    <a href="{% url 'timer_view' %}" class="menu-button">
+        <span class="menu-title">Timer</span>
+    </a>
+    <a href="{% url 'diary_list' %}" class="menu-button">
+        <span class="menu-title">Diary</span>
+    </a>
+</div>
+
+{% include 'base/footer.html' %}
+
+{% endblock %}

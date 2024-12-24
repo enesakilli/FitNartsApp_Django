@@ -1,0 +1,47 @@
+#register_header {
+    color: #FF8000;
+    font-weight: bold;
+    font-size: 52px;
+}
+
+#register_username_input{
+    width: 25%;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#register_password_input {
+    width: 25%;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#button_register {
+    padding: 15px 40px;
+    background-color: #FF8000;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#button_register:hover {
+    background-color: #D65A31;
+}
+  
+#sing_in_question {
+    color: #FF8000;
+    font-size: 20px;
+}
+
+#sign_in_link {
+    color: #FF8000;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#sign_in_link:hover {
+    text-decoration: underline;
+   }

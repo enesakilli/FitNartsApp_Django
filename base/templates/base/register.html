@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class='register_container'>
+    <div style="text-align: center;">
+        <h1 id="register_header">Register</h1>
+    </div>
+    
+    <!-- views'te register_user ile bu sayfaya yönlendiriyorum -->
+    
+    <form method="POST">
+        {% csrf_token %}
+        <div style="text-align: center;">
+            <input type="text" name="username" placeholder="Username" id="register_username_input" required/>
+            <br>
+            <input type="password" name="password" placeholder="Password" id="register_password_input" required/>
+            <br>
+            <button type="submit" id="button_register">Sign up</button>
+        </div>
+    </form>
+    
+    <div style="text-align: center;">
+        <p id="sing_in_question">Already signed up?</p>
+        <a href="{% url 'login' %}" id="sign_in_link">Sign in</a>
+    </div>
+</div>
+
+{% include 'base/footer.html' %}
+
+{% endblock %}

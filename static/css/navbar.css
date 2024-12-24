@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo ve içerik arasında boşluk bırakır */
+    background-color: #FF8000;
+    padding: 10px 20px; 
+    color: white; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    border-bottom: 2px solid #ddd; /* Navbar altında ince bir çizgi */
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+.logo {
+    height: 40px; 
+    width: 40px;
+    margin-right: 10px; 
+}
+
+.logo_text {
+  color: white; /* Renk beyaz yapıldı */
+  font-size: 24px; 
+  font-family: 'Oswald', sans-serif; /* Şık ve modern tipografi */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 10px white, 0 0 20px white; /* Parlaklık ve derinlik efekti */
+  letter-spacing: 1px;
+}
+
+.logo-text:hover {
+    color: #f5f5f5; 
+}
+
+#logout {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 15px; /* Linkler arasında boşluk bırakır */
+}

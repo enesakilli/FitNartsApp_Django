@@ -1,0 +1,98 @@
+#diary_header {
+    color: #FF8000;
+    font-size: 36px;
+}
+
+#new_entry_button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+  
+#new_entry_button:hover {
+    background-color: #D65A31;
+}
+
+#entry_header {
+    color: #FF8000;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#entry_content {
+    font-size: 20px;
+    text-decoration: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+#entry_created {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#entry_delete {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+} 
+
+#entry_delete:hover {
+    background-color: #D65A31;
+}
+
+#entry_edit {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF8000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+} 
+
+#entry_edit:hover {
+    background-color: #D65A31;
+} 
+
+#diary_li {
+    border: 1px solid #FF8000; /* Kenarlık #FF8000 */
+    border-radius: 5px; /* Kenar yuvarlama */
+    padding: 5px 10px; /* İç boşluk sadece yazı çevresinde */
+    margin-bottom: 20px; /* Kutular arası boşluk */
+    background-color: #fdfdfd; /* Hafif gri arkaplan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Animasyon efekti */
+    margin-left: auto; /* Sol kenardan uzaklık bırakılmasın */
+    margin-right: auto; /* Sağ kenardan uzaklık bırakılmasın */
+    text-align: center; /* Yazılar merkezi hizalama */
+    width: 80%; /* Kutucuk genişliği, yazı genişliği ile orantılı */
+    max-width: 600px; /* Maksimum genişlik sınırı */
+}
+
+#diary_li:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge büyür */
+    transform: translateY(-5px); /* Hover sırasında kutu hafif yukarı çıkar */
+}
